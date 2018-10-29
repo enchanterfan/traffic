@@ -18,5 +18,6 @@ public class Control {
 		car.getValue();
 		fj.getValue();
 		in.close();
+		System.exit(0);
 	}
 }

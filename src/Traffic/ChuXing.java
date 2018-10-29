@@ -25,7 +25,8 @@ package Traffic;
 //		 }
 	 
 	 public void getValue(){
-		System.out.println("出行（从出发地到目的地）所需要花费的总时间和总费用分别大约是"+calculate());
+		 System.out.println("选择坐"+trafficMethod+"出行（从出发地到目的地）所需要花费的总时间"
+		 		+ "和总费用分别大约是"+calculate()[0]+"\t\t"+calculate()[1]);
 	 } 
  }
 
@@ -40,12 +41,6 @@ class highSpeedRail extends traffic{
 		 this.trafficMethod=trafficMethod; this.goTime=goTime; 
 		 this.speed=speed; this.distance=distance;
 	}
-//	public Car()
-//	{
-//		super(trafficMethod,goTime,backTime,ticketTime,checkTime,waitTime,speed,
-//				price);
-//	}
-//	
 
 	public double[] calculate() {
 	double []values=new double[2];
@@ -59,13 +54,21 @@ class highSpeedRail extends traffic{
 	}
 	
 	public void getValue(){
-	System.out.println("选择坐高铁出行（从出发地到目的地）所需要花费的总时间和总费用分别大约是"+calculate());
+		 System.out.println("选择坐"+trafficMethod+"出行（从出发地到目的地）所需要花费的总时间"
+			 		+ "和总费用分别大约是"+calculate()[0]+"\t\t"+calculate()[1]);
 	 } 
 }
 
 class Car extends traffic{
 	public final double ticketTime=3.50;
 	public final double price=0.32;
+	
+//	public Car()
+//	{
+//		super(trafficMethod,goTime,backTime,ticketTime,checkTime,waitTime,speed,
+//				price);
+//	}
+//	
 
 	public Car(double backTime, String trafficMethod, double goTime,
 			double speed, double distance) {
@@ -86,7 +89,8 @@ class Car extends traffic{
 		}
 	
 	public void getValue(){
-	System.out.println("选择坐汽车出行（从出发地到目的地）所需要花费的总时间和总费用分别大约是"+calculate());
+		 System.out.println("选择坐"+trafficMethod+"出行（从出发地到目的地）所需要花费的总时间"
+			 		+ "和总费用分别大约是"+calculate()[0]+"\t\t"+calculate()[1]);
 	 } 
 	}
 	
@@ -114,7 +118,8 @@ class airplane extends traffic{
 		}
 	
 	public void getValue(){
-	System.out.println("选择坐飞机出行（从出发地到目的地）所需要花费的总时间和总费用分别大约是"+calculate());
+		 System.out.println("选择坐"+trafficMethod+"出行（从出发地到目的地）所需要花费的总时间"
+			 		+ "和总费用分别大约是"+calculate()[0]+"\t\t"+calculate()[1]);
 	 } 
 	}
 	
